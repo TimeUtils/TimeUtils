@@ -1,5 +1,5 @@
 
-console.log("lendo")
+document.querySelector(".sidebar").style.height = window.innerHeight
 
 function calcularTempoDecorrido(){
   const corretor = 1440;
@@ -20,10 +20,14 @@ function calcularTempoDecorrido(){
 
   const temp = minutoFinal -minutoInicial
   
-  console.log(Math.floor(temp/60), Math.floor(temp%60))
   let resultado = document.querySelector("#resultado")
-  resultado.value = `${Math.floor(temp/60)}:${Math.floor(temp%60)}`
-  resultado.textContent = `${Math.floor(temp/60)}:${Math.floor(temp%60)}`
-
-  return 0;
+  let horas = Math.floor(temp/60);
+  let minutos = Math.floor(temp%60);
+  console.log(minutos)
+  if(minutos < 10) minutos = `0${minutos}`
+  
+  console.log(horas)
+  if(horas < 10) horas = `0${horas}`
+  
+  resultado.textContent = `${horas}:${minutos}`
 }

@@ -5,32 +5,68 @@
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <title>Calculadora</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='./css/main.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='./css/sidebar.css'>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
   <body>
-    <div class="container">
-      <form>
-        <div class="form-group">
-          <label for="tempoInicial">Inicial</label>
-          <input class="form-control" type="time" id="tempoInicial">
-        </div>
-  
-        <div class="form-group">
-          <label for="tempoFinal">Final</label>
-          <input class="form-control" type="time" id="tempoFinal">
-        </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-2 sidebar">
+            <nav id="sidebar">
+              <div class="sidebar-header">
+                <h3>Time Utils</h3>
+            </div>
+    
+            <ul class="list-unstyled components">
+                <p>Projects</p>
+              
+                <li>
+                    <a href="#">Short Time calculator</a>
+                </li>
+                <li>
+                  <a href="#">Soon</a>
+              </li>
 
-        <div class="form-group">
-          <label id="resultado"></label>
+                <div class="developers">
+                  <label>Developer:</label>
+                  <label>
+                    Walter Dalla Torre Neto 
+                  </label>
+                  <a href="https://github.com/Walter-Dalla" target="blank">
+                    <i class="fab fa-github-square" aria-hidden="true"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/walter-dalla-torre-neto-a1421b15a/" target="blank">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                  </a>
+                </div>
+            </ul>
+            </nav>
         </div>
-        
-        <div class="form-group">
-          <button onclick="calcularTempoDecorrido()" type="button" class="btn btn-success">
-            Calcular
-          </button>
+        <div class="col-10">
+          <form>
+            <div class="form-group">
+              <label for="tempoInicial">Inicial</label>
+              <input value="00:00" class="form-control" type="time" id="tempoInicial">
+            </div>
+      
+            <div class="form-group">
+              <label for="tempoFinal">Final</label>
+              <input class="form-control" type="time" id="tempoFinal">
+            </div>
+  
+            <div class="form-group">
+              <label id="resultado"></label>
+            </div>
+            
+            <div class="form-group">
+              <button onclick="calcularTempoDecorrido()" type="button" class="btn btn-success">
+                Calcular
+              </button>
+            </div>
+          </form>
         </div>
-      </form>
+      </div>
     </div>
 
   </body>
